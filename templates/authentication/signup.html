@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Success</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        .container h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #f3f3f3;
+        }
+        .container p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+        .container a {
+            display: inline-block;
+            padding: 12px 30px;
+            color: #fff;
+            background-color: #ff5e62;
+            background-image: linear-gradient(315deg, #ff5e62 0%, #ff9966 74%);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        .container a:hover {
+            background-image: linear-gradient(315deg, #ff9966 0%, #ff5e62 74%);
+        }
+        @media (max-width: 768px) {
+            .container h1 {
+                font-size: 2em;
+            }
+            .container p {
+                font-size: 1em;
+            }
+            .container a {
+                padding: 10px 25px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Account Created!</h1>
+        <p>Your account has been successfully created. Welcome aboard!</p>
+        <a href="login.html">Proceed to Login</a>
+    </div>
+
+</body>
+</html>
