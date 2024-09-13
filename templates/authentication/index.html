@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 25px;
+            font-size: 28px;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 30px;
+            background-color: #f0f0f0;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 12px 0;
+            margin: 15px 0;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #9b59b6, #71b7e6);
+        }
+        .link {
+            margin-top: 15px;
+        }
+        .link a {
+            color: #9b59b6;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+        }
+        .link a:hover {
+            color: #71b7e6;
+        }
+        #signin, #login {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="signup">
+    <h2>Create Account</h2>
+    <form id="signup-form">
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button type="submit">  <a href="/signup"> Sign Up</a></button>
+    </form>
+    <div class="link">
+        <a href="#signin" onclick="toggleForm('signin')">Already have an account? Sign In</a>
+    </div>
+</div>
+
+<div class="container" id="signin">
+    <h2>Welcome Back!</h2>
+    <form id="signin-form">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit"> <a href="signin"> Sign In</a></button>
+    </form>
+    <div class="link">
+        <a href="#login" onclick="toggleForm('login')">Forgot your password? Login</a><br>
+        <a href="#signup" onclick="toggleForm('signup')">Don't have an account? Sign Up</a>
+    </div>
+</div>
+
+<div class="container" id="login">
+    <h2>Login</h2>
+    <form id="login-form">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+    <div class="link">
+        <a href="#signup" onclick="toggleForm('signup')">Don't have an account? Sign Up</a>
+    </div>
+</div>
+
+<script>
+    function toggleForm(formId) {
+        document.getElementById('signup').style.display = 'none';
+        document.getElementById('signin').style.display = 'none';
+        document.getElementById('login').style.display = 'none';
+        document.getElementById(formId).style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
